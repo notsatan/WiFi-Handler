@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/mainActivity_actionBar"
+        layout="@layout/action_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/mainActivity_linearLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mainActivity_actionBar"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:weightSum="2">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/mainActivity_shareData_card"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="23dp"
+            android:layout_weight="1"
+            android:onClick="share_data"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/shareData_imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_above="@id/mainActivity_shareData_text"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/lend" />
+
+                <TextView
+                    android:id="@+id/mainActivity_shareData_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Share Data"
+                    android:textAllCaps="true"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@android:color/darker_gray" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/mainActivity_receiveData_card"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="23dp"
+            android:layout_weight="1"
+            android:onClick="receive_data"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/receiveData_imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_above="@id/mainActivity_receiveData_text"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/borrow" />
+
+                <TextView
+                    android:id="@+id/mainActivity_receiveData_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Receive Data"
+                    android:textAllCaps="true"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>
