@@ -3,7 +3,7 @@ package com.tinyideas.wifi;
 import android.Manifest;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
-import android.animation.ObjectAnimator;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -21,17 +21,14 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,7 +48,11 @@ public class MainActivity extends AppCompatActivity {
 
     private View divider;
 
-    Intent turnOnHotspot = new Intent(Settings.ACTION_WIRELESS_SETTINGS);
+    public static final String SETTINGS_PACKAGE = "com.coloros.wirelesssettings";
+    public static final String HOTSPOT_SETTINGS_CLASS = "com.coloros.wirelesssettings.OppoWirelessSettingsActivity";
+
+    //Intent turnOnHotspot = new Intent(Settings.ACTION_WIRELESS_SETTINGS);
+    Intent turnOnHotspot = new Intent("android.settings.panel.action.INTERNET_CONNECTIVITY");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,7 +125,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean check() {
-        SystemClock.sleep(500);
         if (ApManager.isApOn(getBaseContext())) {
             cardHandler.setDataSharing();
             return true;
@@ -138,29 +138,48 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void launchHotspotSettings() {
+        Intent intent = new Intent(Intent.ACTION_MAIN, null);
+        ComponentName componentName = new ComponentName(SETTINGS_PACKAGE, HOTSPOT_SETTINGS_CLASS);
+        intent.setComponent(componentName);
+        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
     public void toggle(View view) {
         if (wifiManager.getWifiState() == WifiManager.WIFI_STATE_ENABLED ||
                 wifiManager.getWifiState() == WifiManager.WIFI_STATE_ENABLING) {
             wifiManager.setWifiEnabled(false);
             check();
-        }
+        } else if (ApManager.isApOn(getBaseContext())) {
+            try {
+                ApManager.configApState(getBaseContext());
+                SystemClock.sleep(500);
 
-        if (ApManager.isApOn(getBaseContext())) {
-            ApManager.configApState(getBaseContext());
-            SystemClock.sleep(1000);
-
-            if(!ApManager.isApOn(getBaseContext()))
-                startActivityForResult(turnOnHotspot, ACTIVITY_CODE);
+                if (ApManager.isApOn(getBaseContext()))
+                    startActivityForResult(turnOnHotspot, REQUEST_CODE);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
     public void share_data(View view) {
         try {
-            ApManager.configApState(getBaseContext());
-            SystemClock.sleep(1000);
+            if (!ApManager.isApOn(getBaseContext())) {
+                ApManager.configApState(getBaseContext());
+                SystemClock.sleep(1000);
 
-            if (!ApManager.isApOn(getBaseContext()))
-                startActivityForResult(turnOnHotspot, ACTIVITY_CODE);
+                if (!ApManager.isApOn(getBaseContext()))
+                    launchHotspotSettings();
+            } else {
+                ApManager.configApState(getBaseContext());
+                SystemClock.sleep(1000);
+
+                if (ApManager.isApOn(getBaseContext()))
+                    launchHotspotSettings();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -310,6 +329,15 @@ public class MainActivity extends AppCompatActivity {
                     .setDuration(1000)
                     .setListener(new AnimatorListenerAdapter() {
                         @Override
+                        public void onAnimationStart(Animator animation) {
+                            if(shareData_card.getVisibility() == View.VISIBLE)  {
+                                mainLayout.setGravity(Gravity.TOP);
+                            }
+                            super.onAnimationStart(animation);
+                        }
+                    })
+                    .setListener(new AnimatorListenerAdapter() {
+                        @Override
                         public void onAnimationEnd(Animator animation) {
                             mainLayout.setGravity(Gravity.NO_GRAVITY);
                             shareData_card.setCardBackgroundColor(getResources().getColor(R.color.white));
@@ -322,6 +350,15 @@ public class MainActivity extends AppCompatActivity {
             receiveData_card.animate()
                     .alpha(1.0f)
                     .setDuration(1000)
+                    .setListener(new AnimatorListenerAdapter() {
+                        @Override
+                        public void onAnimationStart(Animator animation) {
+                            if (receiveData_card.getVisibility() == View.VISIBLE)   {
+                                mainLayout.setGravity(Gravity.BOTTOM);
+                            }
+                            super.onAnimationStart(animation);
+                        }
+                    })
                     .setListener(new AnimatorListenerAdapter() {
                         @Override
                         public void onAnimationEnd(Animator animation) {

@@ -29,6 +29,7 @@
             android:layout_margin="23dp"
             android:layout_weight="1"
             android:onClick="share_data"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="20dp"
             app:cardElevation="12dp">
 
@@ -71,6 +72,7 @@
             android:layout_margin="23dp"
             android:layout_weight="1"
             android:onClick="receive_data"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="20dp"
             app:cardElevation="12dp">
 
