@@ -21,6 +21,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
@@ -48,8 +49,10 @@ public class MainActivity extends AppCompatActivity {
 
     private View divider;
 
-    public static final String SETTINGS_PACKAGE = "com.coloros.wirelesssettings";
-    public static final String HOTSPOT_SETTINGS_CLASS = "com.coloros.wirelesssettings.OppoWirelessSettingsActivity";
+    private final static String DEBUG_TAG = "tempDebugTag";
+
+    public static String SETTINGS_PACKAGE = Settings.ACTION_WIRELESS_SETTINGS;
+    public static String HOTSPOT_SETTINGS_CLASS = "";
 
     //Intent turnOnHotspot = new Intent(Settings.ACTION_WIRELESS_SETTINGS);
     Intent turnOnHotspot = new Intent("android.settings.panel.action.INTERNET_CONNECTIVITY");
@@ -79,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
 
         wifiManager = (WifiManager)
                 this.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+
+        getDeviceDetails();
 
         Window window = getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -117,6 +122,21 @@ public class MainActivity extends AppCompatActivity {
         handler.post(r);
     }
 
+    private void getDeviceDetails() {
+        String manufacturer = Build.MANUFACTURER;
+
+        if (manufacturer.equalsIgnoreCase("Oppo"))  {
+            Log.d(DEBUG_TAG, "Found an Oppo Device");
+            //SETTINGS_PACKAGE = "com.coloros.wirelesssettings";
+            //HOTSPOT_SETTINGS_CLASS = "com.coloros.wirelesssettings.OppoWirelessSettingsActivity";
+        } else if (manufacturer.equalsIgnoreCase("Redmi") || manufacturer.equalsIgnoreCase("Xiaomi"))   {
+            Log.d(DEBUG_TAG, "Found a Redmi Device\n\n\tManufacturer:" + manufacturer);
+
+        } else if (manufacturer.equalsIgnoreCase("Vivo"))   {
+            Log.d(DEBUG_TAG, "Found a Vivo Device!");
+        }
+    }
+
     public boolean check() {
         if (ApManager.isApOn(getBaseContext())) {
             cardHandler.setDataSharing();
@@ -133,10 +153,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void launchHotspotSettings() {
         Intent intent = new Intent(Intent.ACTION_MAIN, null);
-        ComponentName componentName = new ComponentName(SETTINGS_PACKAGE, HOTSPOT_SETTINGS_CLASS);
-        intent.setComponent(componentName);
-        intent.addCategory(Intent.CATEGORY_LAUNCHER);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        if (HOTSPOT_SETTINGS_CLASS.length() > 2 && SETTINGS_PACKAGE.length() > 2) {
+            ComponentName componentName = new ComponentName(SETTINGS_PACKAGE, HOTSPOT_SETTINGS_CLASS);
+            intent.setComponent(componentName);
+            intent.addCategory(Intent.CATEGORY_LAUNCHER);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        } else
+            intent = new Intent(SETTINGS_PACKAGE);
         startActivity(intent);
     }
 
