@@ -79,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
 
         wifiManager = (WifiManager)
                 this.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
-        check();
 
         Window window = getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -116,12 +115,6 @@ public class MainActivity extends AppCompatActivity {
         };
 
         handler.post(r);
-    }
-
-    @Override
-    protected void onResume() {
-        check();
-        super.onResume();
     }
 
     public boolean check() {
@@ -222,14 +215,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        switch (requestCode) {
-            case ACTIVITY_CODE:
-                check();
-        }
-    }
-
     public class CardHandler {
         CardView shareData_card;
         CardView receiveData_card;
@@ -313,7 +298,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
 
-
             receiveData_text.setTypeface(null, Typeface.BOLD);
             shareData_text.setTypeface(null, Typeface.NORMAL);
         }
@@ -324,18 +308,16 @@ public class MainActivity extends AppCompatActivity {
                 shareData_card.setElevation(12.0f);
             }
 
+            if (shareData_card.getVisibility() == View.VISIBLE) {
+                mainLayout.setGravity(Gravity.TOP);
+            } else if (receiveData_card.getVisibility() == View.VISIBLE) {
+                mainLayout.setGravity(Gravity.BOTTOM);
+            }
+
+
             shareData_card.animate()
                     .alpha(1.0f)
                     .setDuration(1000)
-                    .setListener(new AnimatorListenerAdapter() {
-                        @Override
-                        public void onAnimationStart(Animator animation) {
-                            if(shareData_card.getVisibility() == View.VISIBLE)  {
-                                mainLayout.setGravity(Gravity.TOP);
-                            }
-                            super.onAnimationStart(animation);
-                        }
-                    })
                     .setListener(new AnimatorListenerAdapter() {
                         @Override
                         public void onAnimationEnd(Animator animation) {
@@ -350,15 +332,6 @@ public class MainActivity extends AppCompatActivity {
             receiveData_card.animate()
                     .alpha(1.0f)
                     .setDuration(1000)
-                    .setListener(new AnimatorListenerAdapter() {
-                        @Override
-                        public void onAnimationStart(Animator animation) {
-                            if (receiveData_card.getVisibility() == View.VISIBLE)   {
-                                mainLayout.setGravity(Gravity.BOTTOM);
-                            }
-                            super.onAnimationStart(animation);
-                        }
-                    })
                     .setListener(new AnimatorListenerAdapter() {
                         @Override
                         public void onAnimationEnd(Animator animation) {
