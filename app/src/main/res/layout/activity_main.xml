@@ -51,10 +51,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="Share Data"
+                    android:text="@string/mainActivity_shareDataText"
                     android:textAllCaps="true"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mainActivity_shareData_text"
+                    android:layout_centerInParent="true"
+                    android:textAlignment="center"
+                    android:layout_margin="13dp"
+                    android:text="@string/shareData_helpText"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/mainActivity_helpText_size" />
 
             </RelativeLayout>
         </android.support.v7.widget.CardView>
@@ -71,7 +81,7 @@
             android:layout_height="0dp"
             android:layout_margin="23dp"
             android:layout_weight="1"
-            android:onClick="receive_data"
+            android:onClick="receive_data",
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="20dp"
             app:cardElevation="12dp">
@@ -94,10 +104,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="Receive Data"
+                    android:text="@string/mainActivity_receiveData_text"
                     android:textAllCaps="true"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mainActivity_receiveData_text"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="13dp"
+                    android:text="@string/receiveData_helpText"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/mainActivity_helpText_size" />
 
             </RelativeLayout>
         </android.support.v7.widget.CardView>
