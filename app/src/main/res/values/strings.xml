@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Wifi</string>
+    <string name="mainActivity_shareDataText">Share Data</string>
+    <string name="mainActivity_receiveData_text">Receive Data</string>
+
+    <string name="shareData_helpText">जिस डिवाइस में इंटरनेट होगा, वह उसे शेयर करेगा</string>
+    <string name="receiveData_helpText">जिस डिवाइस में इंटरनेट नहीं है वह प्राप्त करेगा</string>
 </resources>

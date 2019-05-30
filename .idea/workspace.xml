@@ -18,8 +18,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="tempDebugTag" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
@@ -51,89 +50,73 @@
     <session id="1406757062">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="8" />
-          <entry key="xml" value="6" />
+          <entry key="java" value="9" />
+          <entry key="xml" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="8" />
-          <entry key="XML" value="6" />
+          <entry key="JAVA" value="9" />
+          <entry key="XML" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="11" />
-          <entry key="java" value="7170" />
+          <entry key="java" value="8015" />
           <entry key="txt" value="29" />
-          <entry key="xml" value="1398" />
+          <entry key="xml" value="2122" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7170" />
+          <entry key="JAVA" value="8015" />
           <entry key="PLAIN_TEXT" value="40" />
-          <entry key="XML" value="1398" />
+          <entry key="XML" value="2122" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/action_bar_main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tinyideas/wifi/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1603">
-              <caret line="161" column="50" selection-start-line="161" selection-start-column="50" selection-end-line="161" selection-end-column="50" />
+            <state relative-caret-position="561">
+              <caret line="105" column="25" lean-forward="true" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />
               <folding>
-                <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" />
-                <element signature="e#12834#13410#0" expanded="true" />
-                <element signature="e#13409#13410#0" expanded="true" />
-                <element signature="e#14487#15069#0" expanded="true" />
-                <element signature="e#15068#15069#0" expanded="true" />
-                <element signature="e#15208#15591#0" expanded="true" />
-                <element signature="e#15590#15591#0" expanded="true" />
+                <element signature="e#2188#2224#0" expanded="true" />
+                <element signature="e#2594#2622#0" expanded="true" />
+                <element signature="e#2882#2917#0" expanded="true" />
+                <element signature="e#4415#4454#0" expanded="true" />
+                <element signature="e#4901#4931#0" expanded="true" />
+                <element signature="e#5201#5236#0" expanded="true" />
               </folding>
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tinyideas/wifi/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
+            <state relative-caret-position="348">
+              <caret line="165" column="43" lean-forward="true" selection-start-line="165" selection-start-column="43" selection-end-line="165" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" />
+              </folding>
             </state>
           </provider>
-          <provider editor-type-id="android-manifest" />
         </entry>
       </file>
     </leaf>
@@ -142,6 +125,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="layoutResourceFile" />
+        <option value="valueResourceFile" />
         <option value="Class" />
       </list>
     </option>
@@ -165,12 +149,17 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/tinyideas/wifi/HotSpotIntentService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tinyideas/wifi/MyOreoWifiManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tinyideas/wifi/CallbackMaker.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/action_bar_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/help_activity.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tinyideas/wifi/HelpActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tinyideas/wifi/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -184,7 +173,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -224,8 +214,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -321,7 +310,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
@@ -332,20 +321,21 @@
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
+      <window_info anchor="bottom" id="Find" weight="0.32907802" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.32907802" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49932885" weight="0.4539007" />
-      <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32907802" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50067115" side_tool="true" weight="0.4539007" />
-      <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32907802" />
+      <window_info anchor="bottom" id="TODO" order="1" />
+      <window_info anchor="bottom" id="Debug" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50067115" side_tool="true" weight="0.4539007" />
+      <window_info anchor="bottom" id="Version Control" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="6" weight="0.32907802" />
+      <window_info anchor="bottom" id="Logcat" order="7" sideWeight="0.49932885" weight="0.4539007" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" weight="0.3295302" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.3295302" />
+      <window_info active="true" anchor="right" id="Preview" order="4" visible="true" weight="0.3295302" />
       <window_info anchor="right" id="Key Promoter X" order="5" weight="0.3295302" />
       <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="6" side_tool="true" weight="0.3295302" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -360,13 +350,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tinyideas/wifi/MyOreoWifiManager.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tinyideas/wifi/HotSpotIntentService.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tinyideas/wifi/CallbackMaker.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tinyideas/wifi/ApManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
@@ -391,14 +374,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/action_bar_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
@@ -407,29 +382,84 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#928#961#0" expanded="true" />
+            <element signature="e#1000#1033#0" expanded="true" />
+            <element signature="e#1224#1252#0" expanded="true" />
+            <element signature="e#2349#2382#0" expanded="true" />
+            <element signature="e#2421#2454#0" expanded="true" />
+            <element signature="e#2414#2444#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tinyideas/wifi/HelpActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="72" selection-start-line="13" selection-start-column="72" selection-end-line="13" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
+        <state relative-caret-position="476">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tinyideas/wifi/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1603">
-          <caret line="161" column="50" selection-start-line="161" selection-start-column="50" selection-end-line="161" selection-end-column="50" />
+        <state relative-caret-position="348">
+          <caret line="165" column="43" lean-forward="true" selection-start-line="165" selection-start-column="43" selection-end-line="165" selection-end-column="43" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" />
-            <element signature="e#12834#13410#0" expanded="true" />
-            <element signature="e#13409#13410#0" expanded="true" />
-            <element signature="e#14487#15069#0" expanded="true" />
-            <element signature="e#15068#15069#0" expanded="true" />
-            <element signature="e#15208#15591#0" expanded="true" />
-            <element signature="e#15590#15591#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="105" column="25" lean-forward="true" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />
+          <folding>
+            <element signature="e#2188#2224#0" expanded="true" />
+            <element signature="e#2594#2622#0" expanded="true" />
+            <element signature="e#2882#2917#0" expanded="true" />
+            <element signature="e#4415#4454#0" expanded="true" />
+            <element signature="e#4901#4931#0" expanded="true" />
+            <element signature="e#5201#5236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
   </component>
   <component name="masterDetails">
