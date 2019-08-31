@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <include
-        android:id="@+id/mainActivity_actionBar"
-        layout="@layout/action_bar_main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true" />
-
     <LinearLayout
         android:id="@+id/mainActivity_linearLayoutMain"
         android:layout_width="match_parent"
@@ -21,6 +14,12 @@
         android:orientation="vertical"
         android:padding="20dp"
         android:weightSum="2">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@android:color/darker_gray" />
 
         <android.support.v7.widget.CardView
             android:id="@+id/mainActivity_shareData_card"
@@ -55,25 +54,9 @@
                     android:textAllCaps="true"
                     android:textSize="25sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/mainActivity_shareData_text"
-                    android:layout_centerInParent="true"
-                    android:textAlignment="center"
-                    android:layout_margin="13dp"
-                    android:text="@string/shareData_helpText"
-                    android:textAllCaps="true"
-                    android:textSize="@dimen/mainActivity_helpText_size" />
-
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
 
-        <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="2px"
-            android:background="@android:color/darker_gray" />
+        </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
             android:id="@+id/mainActivity_receiveData_card"
@@ -81,7 +64,7 @@
             android:layout_height="0dp"
             android:layout_margin="23dp"
             android:layout_weight="1"
-            android:onClick="receive_data",
+            android:onClick="receive_data"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="20dp"
             app:cardElevation="12dp">
@@ -108,20 +91,17 @@
                     android:textAllCaps="true"
                     android:textSize="25sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/mainActivity_receiveData_text"
-                    android:layout_centerInParent="true"
-                    android:layout_margin="13dp"
-                    android:text="@string/receiveData_helpText"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textSize="@dimen/mainActivity_helpText_size" />
-
             </RelativeLayout>
+
         </android.support.v7.widget.CardView>
 
     </LinearLayout>
+
+    <include
+        android:id="@+id/mainActivity_actionBar"
+        layout="@layout/action_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
 
 </RelativeLayout>
