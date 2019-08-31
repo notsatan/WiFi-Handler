@@ -22,7 +22,7 @@ As such, the application is using the generic android intent for navigating to t
 ### I was promised memes. Gib memes.
 Alright here you go.
 
-![Java Meme](https://i.imgur.com/7t28tmv.jpg)
+![Java Meme](https://i.imgur.com/4QRTsR2.jpg)
 
 ## Licensing
 This project is licensed under [Mozilla Public License 2.0](https://github.com/digital-rem/WiFi-Handler/blob/master/LICENSE)
