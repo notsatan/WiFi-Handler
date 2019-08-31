@@ -1,5 +1,5 @@
 # WiFi-Handler
-Android app to help people switch between using Wifi and Wifi Hotspot. Made to help old people switch between using Wifi and Wifi-Hotspot without having to go through the system settings to locate the two. In prior versions (before Android 6.0) the app will switch the hotspot on/off by itself. For the newer versions, the app will directly send the user to the relevant settings page.
+Android app to help people switch between using Wifi and Wifi Hotspot. Made to help people switch between using Wifi and Wifi-Hotspot without having to go through the system settings to locate the two. In prior versions (before Android 6.0) the app will switch the hotspot on/off by itself. For the newer versions, the app will directly send the user to the relevant settings page.
 
 
 ### How do I use this?
