@@ -45,9 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private CardHandler cardHandler;
 
     private View divider;
-
-    private final static String DEBUG_TAG = "tempDebugTag";
-
+    
     public static String SETTINGS_PACKAGE = "com.android.settings";
     public static String HOTSPOT_SETTINGS_CLASS = "com.android.settings.TetherSettings";
 
