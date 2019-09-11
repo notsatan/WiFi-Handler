@@ -19,7 +19,7 @@ The intent required to navigate to the Wifi Hotspot section in settings can vary
 
 As such, the application is using the generic android intent for navigating to the Hotspot settings, but even that can cause problems in specific devices.
 
-### I was promised memes. Gib memes.
+### I want memes. Gib memes.
 Alright here you go.
 
 ![Java Meme](https://i.imgur.com/4QRTsR2.jpg)
